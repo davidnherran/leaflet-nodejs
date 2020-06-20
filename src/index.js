@@ -13,6 +13,9 @@ app.set('views', path.join(__dirname, "views"))
 // Routes
 app.use(require('./routes/'))
 
+// Static files
+app.use(express.static(path.join(__dirname, "public")))
+
 // Srarting the server
 app.listen(3000, () => {
   console.log("Server on port 3000");
